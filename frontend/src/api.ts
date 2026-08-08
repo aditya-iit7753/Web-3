@@ -18,7 +18,13 @@ export type AgentEvent = {
   time: string;
 };
 
-const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:4000";
+function normalizeApiUrl(value: string | undefined) {
+  const fallback = "http://localhost:4000";
+  const raw = (value || fallback).trim().replace(/\/$/, "");
+  return /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+}
+
+const API_URL = normalizeApiUrl(import.meta.env.VITE_API_URL);
 
 async function getJson<T>(path: string): Promise<T> {
   const response = await fetch(`${API_URL}${path}`);
