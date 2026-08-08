@@ -20,9 +20,18 @@ const accessSchema = z.object({
 });
 
 app.use(helmet());
-app.use(cors({ origin: [frontendUrl, "http://localhost:5173"], credentials: true }));
+app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
+
+app.get("/", (_request, response) => {
+  response.json({
+    status: "online",
+    service: "algorand-agentic-finance-api",
+    health: "/health",
+    overview: "/api/overview"
+  });
+});
 
 app.get("/health", (_request, response) => {
   response.json({ status: "ok", service: "algorand-agentic-finance-api" });
