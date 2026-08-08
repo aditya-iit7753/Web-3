@@ -1,0 +1,538 @@
+:root {
+  color: #f8fafc;
+  background: #07110f;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(45, 212, 191, 0.2), transparent 30%),
+    radial-gradient(circle at 90% 10%, rgba(251, 191, 36, 0.12), transparent 26%),
+    linear-gradient(135deg, #07110f 0%, #0b1816 48%, #111827 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 22px;
+}
+
+.brand,
+.navLinks,
+.heroActions,
+.trustBand div,
+.featureList div,
+.agentCard,
+.flowLine,
+.cardMeta,
+.eyebrow {
+  align-items: center;
+  display: flex;
+}
+
+.brand {
+  font-weight: 850;
+  gap: 10px;
+}
+
+.brandMark {
+  align-items: center;
+  background: rgba(45, 212, 191, 0.13);
+  border: 1px solid rgba(94, 234, 212, 0.35);
+  border-radius: 8px;
+  color: #5eead4;
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+.navLinks {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  gap: 6px;
+  padding: 6px;
+}
+
+.navLinks a {
+  border-radius: 999px;
+  color: #cbd5e1;
+  font-size: 14px;
+  padding: 9px 14px;
+}
+
+.navLinks a:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #ffffff;
+}
+
+.navButton,
+.primaryButton,
+.secondaryButton,
+.accessForm button {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  font-weight: 800;
+  gap: 10px;
+  justify-content: center;
+}
+
+.navButton {
+  background: #5eead4;
+  color: #042f2e;
+  min-height: 42px;
+  padding: 0 16px;
+}
+
+.hero {
+  align-items: center;
+  display: grid;
+  gap: 52px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  margin: 0 auto;
+  max-width: 1180px;
+  min-height: calc(100vh - 88px);
+  padding: 42px 22px 78px;
+}
+
+.hero h1,
+.sectionTitle h2,
+.commerceSection h2,
+.accessSection h2 {
+  letter-spacing: 0;
+  line-height: 1.02;
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 82px);
+  max-width: 880px;
+}
+
+.hero p,
+.commerceSection p,
+.accessSection p,
+.componentCard p {
+  color: #b7c8d8;
+  line-height: 1.7;
+}
+
+.hero p {
+  font-size: 19px;
+  max-width: 680px;
+}
+
+.eyebrow {
+  color: #67e8f9;
+  font-size: 14px;
+  font-weight: 850;
+  gap: 8px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.heroActions {
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.primaryButton,
+.secondaryButton,
+.accessForm button {
+  min-height: 50px;
+  padding: 0 18px;
+}
+
+.primaryButton,
+.accessForm button {
+  background: #5eead4;
+  border: 0;
+  color: #042f2e;
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+}
+
+.console,
+.activityPanel,
+.accessForm {
+  background: rgba(7, 17, 15, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.console {
+  padding: 18px;
+}
+
+.consoleHeader {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.consoleHeader span {
+  background: #475569;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+}
+
+.consoleHeader span:first-child {
+  background: #fb7185;
+}
+
+.consoleHeader span:nth-child(2) {
+  background: #facc15;
+}
+
+.consoleHeader span:nth-child(3) {
+  background: #22c55e;
+}
+
+.agentCard {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  gap: 14px;
+  padding: 18px;
+}
+
+.agentCard small {
+  color: #94a3b8;
+  display: block;
+  margin-top: 4px;
+}
+
+.verified {
+  color: #5eead4;
+  margin-left: auto;
+}
+
+.metricsGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 14px;
+}
+
+.metricsGrid article {
+  background: rgba(255, 255, 255, 0.055);
+  border-radius: 8px;
+  min-width: 0;
+  padding: 16px;
+}
+
+.metricsGrid small,
+.cardMeta,
+.activityItem small {
+  color: #94a3b8;
+}
+
+.metricsGrid strong {
+  display: block;
+  font-size: 24px;
+  margin: 12px 0 6px;
+}
+
+.metricsGrid span {
+  color: #d1fae5;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.flowLine {
+  background: #0f172a;
+  border-radius: 8px;
+  color: #d1fae5;
+  gap: 10px;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding: 18px;
+}
+
+.flowLine i {
+  background: linear-gradient(90deg, #5eead4, #fbbf24);
+  flex: 1;
+  height: 2px;
+}
+
+.trustBand {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0 22px;
+}
+
+.trustBand div {
+  color: #dbeafe;
+  font-weight: 750;
+  gap: 10px;
+  justify-content: center;
+  min-height: 92px;
+}
+
+.trustBand svg {
+  color: #fbbf24;
+}
+
+.section,
+.commerceSection,
+.accessSection {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 92px 22px;
+}
+
+.sectionTitle {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.sectionTitle span {
+  color: #fbbf24;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.sectionTitle h2,
+.commerceSection h2,
+.accessSection h2 {
+  font-size: clamp(32px, 5vw, 54px);
+  max-width: 760px;
+}
+
+.componentGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.componentCard {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 276px;
+  padding: 22px;
+}
+
+.cardTop {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.componentCard h3,
+.activityPanel h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.risk {
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  height: 28px;
+  padding: 6px 10px;
+}
+
+.riskLow {
+  background: rgba(45, 212, 191, 0.18);
+  color: #5eead4;
+}
+
+.riskMedium {
+  background: rgba(251, 191, 36, 0.17);
+  color: #fde68a;
+}
+
+.riskHigh {
+  background: rgba(248, 113, 113, 0.18);
+  color: #fecaca;
+}
+
+.cardMeta {
+  justify-content: space-between;
+}
+
+.commerceSection,
+.accessSection {
+  align-items: center;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 0.9fr;
+}
+
+.featureList {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 28px;
+}
+
+.featureList div {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  gap: 10px;
+  min-height: 68px;
+  padding: 16px;
+}
+
+.featureList svg {
+  color: #5eead4;
+  flex: 0 0 auto;
+}
+
+.activityPanel {
+  padding: 24px;
+}
+
+.activityItem {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 12px 1fr;
+  margin-top: 22px;
+}
+
+.activityItem > span {
+  background: #5eead4;
+  border-radius: 50%;
+  height: 12px;
+  margin-top: 7px;
+  width: 12px;
+}
+
+.activityItem p {
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+
+.accessForm {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.accessForm label {
+  color: #cbd5e1;
+  display: grid;
+  font-weight: 750;
+  gap: 8px;
+}
+
+.accessForm input,
+.accessForm select {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  color: #ffffff;
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.accessForm option {
+  color: #07110f;
+}
+
+.accessForm button {
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.formStatus {
+  color: #67e8f9;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .commerceSection,
+  .accessSection {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .trustBand,
+  .componentGrid,
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sectionTitle {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .navLinks {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .trustBand,
+  .componentGrid,
+  .metricsGrid,
+  .featureList {
+    grid-template-columns: 1fr;
+  }
+
+  .flowLine {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .flowLine i {
+    flex: auto;
+    width: 100%;
+  }
+}
